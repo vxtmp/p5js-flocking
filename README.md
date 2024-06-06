@@ -1,4 +1,5 @@
 ### CMPM169 Spring 2024 Final Assignment
+Norman Zhu
 noxzhu@gmail.com
 nzhu@ucsc.edu
 # p5js-flocking
