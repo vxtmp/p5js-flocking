@@ -1,6 +1,6 @@
 precision mediump float;
 // // Default vertex position attribute from p5js
-attribute vec3 position;
+// attribute vec3 position;
 
 attribute vec3 aPosition;
 

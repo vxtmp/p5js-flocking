@@ -59,6 +59,26 @@ class Block {
     drawBuffer.strokeWeight(0);
     drawBuffer.rect(this.x, -this.y - this.size, this.size, this.size);
   }
+  debugDrawTwo() {
+    // not debug anymore. draw mode 1. fake liquid sim.
+    if (DENSITY_COLORED_TILES) {
+      let value = 90 + 100 * this.valuePersistence;
+      // drawBuffer.fill(value*0.9, value*1.4, value*2.4, 255);
+      // let r = 0;
+      // if (value > 220) {
+      //   r = 255;
+      // } else {
+      //   r = value * 1.4;
+      // }
+      // let g = value * 1.4;
+      // let b = value * 2.4;
+      drawBuffer.fill(value*1.3, value*0.9, 140, 255);
+    } else {
+      drawBuffer.fill(80, 80, 80, 255);
+    }
+    drawBuffer.strokeWeight(0);
+    drawBuffer.rect(this.x, -this.y - this.size, this.size, this.size);
+  }
 
   lineDraw() {
     // draw mode 3.

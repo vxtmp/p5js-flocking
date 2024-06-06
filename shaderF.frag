@@ -23,7 +23,7 @@ void main() {
   // yCoord *= -1.0;
   
   vec2 coord = vec2(xCoord, yCoord);
-  coord *= 1.0; 
+  coord *= 0.5; // pixel coord.
   
   float r = 0.0;
   float g = 0.0;

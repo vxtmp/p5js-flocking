@@ -1,7 +1,7 @@
 let USE_WEB_GL = true;
 
 // DYNAMIC VARIABLES
-let DRAW_MODES_MAX = 4; //
+let DRAW_MODES_MAX = 5; //
 let drawMode = 0;
 
 let NEIGHBOR_RADIUS = 1;
@@ -122,6 +122,7 @@ function draw() {
   } else if (drawMode == 3) {
     drawModeThree();
   } else if (drawMode == 4) {
+    drawModeFour();
   } else if (drawMode == 5) {
   }
 
@@ -156,6 +157,9 @@ function incrementDrawMode() {
   if (drawMode == 3){
     regrid(20, width, height);
   }
+  if (drawMode == 4){
+    regrid(25, width, height);
+  }
   respeedFlockers();
 }
 
@@ -175,6 +179,9 @@ function decrementDrawMode() {
   }
   if (drawMode == 3){
     regrid(20, width, height);
+  }
+  if (drawMode == 4){
+    regrid(25, width, height);
   }
   respeedFlockers();
 }

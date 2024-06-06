@@ -104,28 +104,26 @@ function drawModeOne() {
   image(drawBuffer, -width / 2, -height / 2);
 }
 function drawModeFour() {
-  // fire
-
-  shaderBuffer.shader(myShader);
-  myShader.setUniform("resolution", [width, height]);
-  myShader.setUniform("DRAW_MODE", 4);
-  storeFlockerData();
-
-  myShader.setUniform("flockCount", MAX_FLOCKERS);
-  // console.log ("passed flockData.length is " + flockData.length);
-
-  shaderBuffer.fill(0, 0, 0, 0);
-  shaderBuffer.rect(0, 0, 0, 0);
-
+  // fake liquid sim.
+  for (let row of grid) {
+    for (let block of row) {
+      block.debugDrawTwo();
+    }
+  }
   // retune various variables.
+  MAX_FLOCKERS = 30;
+  if (allFlockers.length < MAX_FLOCKERS) dupeUntilMax();
+  if (allFlockers.length > MAX_FLOCKERS) deleteRandom();
+  NEIGHBOR_RADIUS = 2;
+  MAG_STEER = false;
   EDGE_BOUNCE = false;
   EDGE_AVOIDANCE = false;
   GRAVITY_VECTOR = false;
-  avoidanceWeight = 0.003; // Used actively for flocking behaviors
-  avoidanceRange = 90;
+  avoidanceWeight = 0.004; // Used actively for flocking behaviors
+  avoidanceRange = 180;
   SPEED_VARIANCE = 0.9; // random increase
-  MAX_SPEED = 0.9; // base max speed. Used to initialize units
-  alignmentWeight = 0.006;
-  cohesionWeight = 0.006;
-  image(shaderBuffer, -width / 2, -height / 2);
+  MAX_SPEED = 0.3; // base max speed. Used to initialize units
+  alignmentWeight = 0.009;
+  cohesionWeight = 0.004;
+  image(drawBuffer, -width / 2, -height / 2);
 }
