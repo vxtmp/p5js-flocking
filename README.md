@@ -1,5 +1,5 @@
 ### CMPM169 Spring 2024 Final Assignment
-### Norman Zhu nzhu@ucsc.edu
+Norman Zhu (email: noxzhu@gmail.com, school email: nzhu@ucsc.edu)
 # p5js-flocking
 p5js creative coding project. various visualizations using flocking as a base.
 
