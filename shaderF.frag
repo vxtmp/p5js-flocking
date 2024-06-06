@@ -23,7 +23,7 @@ void main() {
   // yCoord *= -1.0;
   
   vec2 coord = vec2(xCoord, yCoord);
-  coord *= 0.5; 
+  coord *= 1.0; 
   
   float r = 0.0;
   float g = 0.0;
