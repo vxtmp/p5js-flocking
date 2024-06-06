@@ -2,6 +2,7 @@
 Norman Zhu (email: noxzhu@gmail.com, school email: nzhu@ucsc.edu)
 # p5js-flocking
 p5js creative coding project. various visualizations using flocking as a base.
+Access via the github page link on the right, or from here: https://vxtmp.github.io/p5js-flocking/
 
 How to use:
   Use Q and W to cycle back and forth between the various visual modes.
