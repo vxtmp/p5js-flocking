@@ -1,5 +1,26 @@
 /*
-Norman Zhu Texture Assignment
+CMPM169 Spring 2024 Final Assignment
+Norman Zhu nzhu@ucsc.edu
+
+How to use:
+  Use Q and W to cycle back and forth between the various visual modes.
+  Use left click on the canvas to cause an effect! 
+  Each of the display modes will have a different effect.
+
+    
+0:  Basic flocking algorithm. 
+    LeftMouseClick: Pushes flocking units away from clicked location.
+    
+1:  Lines visual.
+    LeftMouseClick: None. No time ;_;
+    
+2:  Shader based visual "fireflies"
+    LeftMouseClick: Places a lure that attracts units. You can only place one at a time.
+    
+3:  Fake fluid sim
+    LeftMouseClick: Spawns more water
+
+
 
 Known Bugs
 x  Neighbor blocks will not include blocks across the edge of the grid.
@@ -8,10 +29,16 @@ x  Neighbor blocks will not include blocks across the edge of the grid.
           need to have their pos.X and pos.Y translated
               i.e. add/subtract canvaswidth or canvasheight 
 
-x  FlockData isn't being passed into the shader correctly.
-    ThisData pulled from the flockData array seems to be the cause of the black screen
-      in spite of 
-    > just use primitive arrays instead of vector uniforms.
+   Some PCs will display coordinates incorrectly.
+       > My pc and my friend's PCs seem to work correctly with shaderF.frag:26
+         set to coord *= 0.5. However on my laptop this doesn't work and it               works only if the line is set to coord *= 1.0;
+         
+
+
+
+
+
+
 
 
 x  float actual_brightness per flocker
