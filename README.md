@@ -1,7 +1,7 @@
 ### CMPM169 Spring 2024 Final Assignment
+### Norman Zhu nzhu@ucsc.edu
 # p5js-flocking
 p5js creative coding project. various visualizations using flocking as a base.
-### Norman Zhu nzhu@ucsc.edu
 
 How to use:
   Use Q and W to cycle back and forth between the various visual modes.
